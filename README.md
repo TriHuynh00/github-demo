@@ -23,6 +23,10 @@ using the IntelliJ IDEA 2023 Edition.
 
 #### Cloning Project
 
+Clicking the "<> Code" button on the repository home page shows the **repository_url**, as illustrated in the picture below.
+
+![An image showing the <> Code button, clicking on the button opens a pop-up window. Under the HTTPS tab is an input field containing the URL of the GitHub repository](picture/repoCodeCloneUrl.png)
+
 From the IntelliJ Hamburger button, open the Main Menu Hamburger Button (Hotkey Alt + \)
 , then select File / New / Project from Version Control
 
@@ -110,11 +114,9 @@ after our teammates push their code, the command is:
 ## Git Guideline
 
 This section introduces the mechanism of frequently used Git commands. 
-We refer to the **Brief Instruction** section if you need a quick start on the project.
+We refer to the **Brief Instruction** section above if you need a quick start on the project.
 
-## Create and clone a repository
-
-### Cloning a repository
+### Create and clone a repository
 
 When you or your teammate creates a repository on the GitHub website, 
 that repository exists in the GitHub server but not on our computer. 
@@ -137,40 +139,79 @@ The command to clone using the HTTPS URL is as follows:
 
 > clone https://github.com/TriHuynh00/github-demo.git
 
-## Add new changes to a repository
+### Add new changes to a repository
 
-- Describe the Working Repository, Staging Area, and .git Repository to explain that
-adding files are preparing them for commit, but we don't add the file directly to the
-repo
+![A picture illustrating changes to file are moved from the working directory (current project version) to the Staging Area](picture/3SectionsOfGit.png)
 
-Introduce: 
-1. git add fileName
-2. git add -u : Stage modified and deleted files. NOT new files
-3. git add .  : Recursively add the entire directory, including files start with dot
-4. git add -A : Stage all modified, deleted, and new files
+Adding new changes to Git does not simply overwrite the new file in the GitHub repository.
+Git contains three main sections: 
 
-Add UI Examples
+1. **Working Directory:** The file structure of a version of the repository
+2. **Staging Area:** The storage of files that will be merged into your project in the next commit
+3. **.git Directory:** The metadata and objects of the repository.
 
-## Commit the change
+Any new or modified file must be placed in a Staging Area first.
+Once the user commits the code, 
+Git updates the files from the Staging Area to the .git Directory of the project repository.
 
-Commit creates a snapshot of our repo. 
-A chain of commits shows the history of our repository.
+The command to add files or folders into the Staging Area is:
 
-Introduce:
-1. git commit -m "Message" : Creates a snapshot of added files into the repo
-2. git commit --amend      : 
+> git add fileName1 fileName2 
 
-Add UI Examples
+> git add folderName1 folderName2 fileName1 fileName2
 
-## Push the change to the repository
+Additionally, the **git add** command has several options as follows:
 
-### Pushing using SSH
+1. **git add -u** : Stage modified and deleted files. NOT new files
+2. **git add .**  : Recursively add the entire directory, including files start with dot
+3. **git add -A** : Stage all modified, deleted, and new files
+
+### Commit the Changes
+
+A Commit creates a snapshot of our repository 
+from the files in the Staging Area, 
+i.e., a version of the project. 
+As a result, a chain of commits shows the history of our repository.
+
+In the command line interface, create a commit using the following command:
+
+> git commit -m "Message"
+
+In case we want to fix a mistake in the previous commit **message**,
+using the **--amend** option let us modify the message 
+without altering the snapshot, i.e., the files in the commit.
+
+> git commit --amend -m "An updated Message" 
+
+Modern IDE offers a convenient Commit GUI (Graphical User Interface) 
+that presents the list of modified, deleted, or new files available for commit,
+and a text field to input the commit message. 
+The following screenshot shows an example of a Commit GUI in IntelliJ.
+
+![An Image showing the tick marks on the selected modified, created, or deleted file. The commit message is below the list, with 2 buttons for "Commit" and "Commit and Push"](picture/markModifiedFileIde.png)
+
+### Push the Change to the GitHub Repository
+
+A Push command updates the committed snapshot to the remote repository in the GitHub server,
+Since the push action shall be done by an authorized user,
+Git requires the user credentials in every push. 
+To avoid Git prompting credentials everytime we push the code,
+one can configure Git to use the following mechanisms for automatic authorization.
+
+#### Pushing using SSH
+
+**Note:** If you are new to Git, we recommend trying the Personal Access Token
+method in the next section.
 
 One disadvantage of cloning the repository with HTTPS URL is that
 users must give their credentials (username and password) for every push.
 Another way to avoid this inconvenience is using the Secure Shell (SSH) key verification mechanism,
 which requires users to configure their SSH key once during the entire GitHub session.
 Therefore, we can push and pull code without being prompted for credentials.
+
+First, we need to create an SSH key. If you are using Windows,
+one option is to use Git Bash and create the SSH key as instructed
+[here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key).
 
 To set the SSH Key, navigate to your avatar to the top right corner of the screen
 and select Settings.
@@ -179,19 +220,54 @@ and select Settings.
 
 ![A picture showing the Settings option near the bottom of the User Options panel](picture/settingLocation.png)
 
-// Introduce into pushing in IDE
+Choose the **SSH and GPG keys** option in the left menu panel. 
+Then click on the **New SSH Key** button on the top right of the page.
 
-### Using Authtoken
+![A picture showing the location of the SSH and GPG keys setting on the left of the menu panel and the New SSH Key button on the top right of the page](picture/sshKeyMgmtGui.png)
 
-// Create a single auth token.
+Set the title and copy the content of your newly create private key
+into the **Key** field. A private key is the file **without** the .pub extension.
 
-// May have problems with multiple account. Not knowing which token to use.
+##### Using the Key in Command Line Interface (CLI)
 
-## Pull the code from the repository
+Configure your key in Git Bash using the following command
 
-git pull
+> eval "$(ssh-agent -s)
 
-// Conflict Resolution
+> ssh-add /path/to/your/SSH/key/folder
+
+Then you can use git commands as usual.
+
+##### Configure the key in IDE
+
+In IntelliJ, navigate to File / Settings. 
+On the left panel, select Version Control / Subversion / SSH.
+Then click on the **Private Key** radio button and 
+select the path to your SSH Key file. 
+
+#### Using Personal Access Token (Authtoken)
+
+An Authtoken contains the user identity and granted privileges.
+The Authtoken can also have an expiration period, 
+which will deactivate the token after the expiry date.
+
+In GitHub, one can create an Authtoken in the following steps:
+1. Click on your avatar in the top right corner and choose "Settings"
+2. On the left menu panel, select **Developer Settings**
+3. On the left menu panel, select **Personal Access Tokens**
+4. Choose **Token classics**
+5. On the top right area of the page, click the **Generate new token** button and select **Generate new token (classic)**
+6. Enter the Note, Expiration, and select the scopes.
+For projects without Continuous Integration / Continuous Deployment feature,
+all options in the **repo** scope and **user - user:email** are sufficient.
+
+## Pull from the Repository (Download)
+
+To get the latest version created by the push of our teammates 
+in the remote repository. A **git pull** is required to merge
+the latest snapshot with the one in our local machine.
+ 
+> git pull
 
 ## Merge local code into the remote repository
 
