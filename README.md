@@ -59,8 +59,22 @@ The below example select the README and Main.java file to be committed.
 
 Pressing the **Commit and Push...** button shows a summary
 of the changes that will be applied to the remote repository.
+Pressing the **Push** button will upload and merge the changes
+to the remote repository.
 
+![A panel summarizing the commits to be merged into the remote repository](picture/pushModifiedFileIde.png)
 
+#### Download the Latest Version from the Remote Repository
+
+To get the latest version into our local machine.
+Select the Git option (Alt + 9) in the bottom left corner of the IDE,
+a Directory Tree will appear. Right-click on the branch that you want
+to download from the repository 
+and select Pull into '<branchName>' to download the latest version of the branch.
+
+The following example pulls the latest version of the main branch to the local repository.
+
+![A screenshot showing the Git option, selected branch, and the Pull into Branch Using Merge option](picture/pullFilesIde.png)
 
 ### Command Lines
 
