@@ -53,15 +53,14 @@ ready to upload the changes to the remote repository. However,
 if we just want to apply the change to our local repository only,
 then select the **Commit** option.
 
-The below example upload the README and Main.java file.
+The below example select the README and Main.java file to be committed.
 
-#### Upload Modified Files
+![An Image showing the tick marks on the selected modified, created, or deleted file. The commit message is below the list, with 2 buttons for "Commit" and "Commit and Push"](picture/markModifiedFileIde.png)
 
-The next step is to select the modified files that we want to 
-upload to the GitHub repository.
+Pressing the **Commit and Push...** button shows a summary
+of the changes that will be applied to the remote repository.
 
-Click on the Commit button near the top left corner of the 
-IntelliJ IDE. We will see two lists of files: Changes and Unversioned Files.
+
 
 ### Command Lines
 
