@@ -14,6 +14,55 @@ Further details of each feature above will be demonstrated in the Git Guideline 
 GitHub operations can be done in command line (like Git Bash), 
 or a GUI application (like in IDEs such as IntelliJ, VS Code, or other Git GUI)
 
+### GUI-based
+
+This tutorial demonstrates how to **clone** a GitHub repository, 
+**upload** modified files and 
+**download** the up-to-date version 
+using the IntelliJ IDEA 2023 Edition.
+
+#### Cloning Project
+
+From the IntelliJ Hamburger button, open the Main Menu Hamburger Button (Hotkey Alt + \)
+, then select File / New / Project from Version Control
+
+![Image showing how to navigate from File to New to Project from Version Control option in the Main Menu of the IDE](picture/menuCreateProjectFromVersionControl.png)
+
+Select the **Repository URL** option and 
+paste the HTTPS URL of the repository into the **URL** field. 
+Select the target folder location in the local machine in the
+**Directory** field and press **Clone**.
+
+![Image Showing the input of a Git Repository in the first line](picture/cloneRepoIdeFirstTime.png)
+
+#### Upload Modified Files to the GitHub Repository on the Server
+
+The next step is to select the modified files that we want to
+upload to our **remote** repository in the GitHub server.
+
+Click on the Commit button near the top left corner of the
+IntelliJ IDE. We will see two lists of files: Changes and Unversioned Files.
+The Changes show the modified files, while the Unversioned Files list the new or deleted files. Select the files or folders that you want to upload to the remote repository in the GitHub server.
+
+Afterward, specify the commit message in the underneath text field. 
+This message typically describes the task you accomplished, 
+the reason for modifying the files or folders, 
+and/or what to do next. 
+Finally, press the **Commit and Push...** button if you are
+ready to upload the changes to the remote repository. However,
+if we just want to apply the change to our local repository only,
+then select the **Commit** option.
+
+The below example upload the README and Main.java file.
+
+#### Upload Modified Files
+
+The next step is to select the modified files that we want to 
+upload to the GitHub repository.
+
+Click on the Commit button near the top left corner of the 
+IntelliJ IDE. We will see two lists of files: Changes and Unversioned Files.
+
 ### Command Lines
 
 The common procedure of working with GitHub is as follows:
@@ -44,10 +93,6 @@ if no conflict exists.
 5. When we want to **download** the **up-to-date repository** 
 after our teammates push their code, the command is:
 > git pull
-
-### GUI-based
-
-// Introduce quickly how it works in IDE.
 
 ## Git Guideline
 
