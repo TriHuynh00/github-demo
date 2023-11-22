@@ -9,6 +9,38 @@ and **download** the most recent update.
 
 Further details of each feature above will be demonstrated in the Git Guideline section:
 
+## Creating an Account
+
+![A image showing the GitHub sign up button on the top right corner of the homepage](picture/signUpBtnLocation.png)
+
+Go to the [GitHub Home Page](https://github.com/)
+and click the **Sign Up** button on the top right of the page.
+Follow the registration steps to create a GitHub Account.
+
+### Student Developer Pack
+
+GitHub provides a special package named **Student Developer Pack**,
+which provides **advanced features** that students can use with regular
+renewal or for a limited number of credits.
+You can use an **existing GitHub account**
+to **register** for the **Student Developer Pack**
+by clicking on the link below:
+
+https://education.github.com/pack
+
+Click the **Sign Up for Student Developer Pack** button,
+and follow the procedure to register for an account:
+
+1. Setup Billing Information
+2. Setup Two-Factor Authentication
+3. Select or specify your **RMIT Email Address**
+4. State how you plan to use GitHub to support your education
+5. Press the **Continue** button and finish the rest of the process
+
+## Repository Home Page
+
+
+
 ## Brief Instruction
 
 GitHub operations can be done in command line (like Git Bash), 
@@ -81,6 +113,10 @@ The following example pulls the latest version of the main branch to the local r
 ![A screenshot showing the Git option, selected branch, and the Pull into Branch Using Merge option](picture/pullFilesIde.png)
 
 ### Command Lines
+
+One popular tool to use Git via a Command Line Interface (CLI) is
+**Git Bash**. 
+You can download Git Bash for your OS ![here](https://git-scm.com/downloads).
 
 The common procedure of working with GitHub is as follows:
 
@@ -229,6 +265,10 @@ Set the title and copy the content of your newly create private key
 into the **Key** field. A private key is the file **without** the .pub extension.
 
 ##### Using the Key in Command Line Interface (CLI)
+
+One popular tool to use Git via a Command Line Interface (CLI) is
+**Git Bash**.
+You can download Git Bash for your OS ![here](https://git-scm.com/downloads).
 
 Configure your key in Git Bash using the following command
 
