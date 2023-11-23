@@ -5,9 +5,19 @@ This repository is created to demonstrate the github features to students learni
 The Brief Instruction section shows the command to 
 **clone**, 
 **upload** modified file, 
-and **download** the most recent update.
+and **download** the most recent update. 
+Further details of each feature above will be demonstrated 
+in the **Git Guideline** section.
 
-Further details of each feature above will be demonstrated in the Git Guideline section:
+**Table of Content**
+
+[Create an Account](#creating-an-account)
+
+[Brief Instruction](#brief-instruction)
+
+[Conventional Practice](#conventional-practice)
+
+[Git Guideline](#git-guideline)
 
 ## Creating an Account
 
@@ -37,14 +47,13 @@ and follow the procedure to register for an account:
 4. State how you plan to use GitHub to support your education
 5. Press the **Continue** button and finish the rest of the process
 
-## Repository Home Page
-
-
-
 ## Brief Instruction
 
 GitHub operations can be done in command line (like Git Bash), 
 or a GUI application (like in IDEs such as IntelliJ, VS Code, or other Git GUI)
+
+### Create a Repository
+
 
 ### GUI-based
 
@@ -147,6 +156,38 @@ if no conflict exists.
 after our teammates push their code, the command is:
 > git pull
 
+## Conventional Practice
+
+1. **Pulling before Pushing**:
+While working on your code, other teammates may have finished their 
+development and pushed their code. 
+Therefore, to ensure that the latest version in the repository 
+is compatible with your implementation, we should **call git pull** to
+check for any new snapshot, **rerun tests**, and **solve** any **conflicting** code 
+**before pushing** our work.
+
+
+2. **Descriptive Commit Message**: A commit message summarizes 
+the implementation of its snapshot. Therefore, to help us and other 
+team members understand why, how, and what our commit is created, 
+the commit message should **briefly describe the implemented feature or fix**, 
+any **unfinished tasks** or **known issues**, and the **next steps**.
+
+
+3. **Commit Small and Tested Code Frequently**: 
+To minimize the risks of creating complex bugs in a single commit 
+of a completed requirement, continually pushing small and tested features
+helps us to identify potential conflict or incompatible behavior with 
+other application components easier because the scope and size of
+the changes are manageable.
+
+
+4. **Do Not Execute _git add_ on Executable Binaries and Libraries**: 
+To decrease the remote repository's size and reduce upload and download 
+time, we should not add binaries or libraries into the stating area. 
+Another reason is that one can install the binaries and libraries on 
+their PC. Thus, adding and pushing the files is unnecessary.
+
 ## Git Guideline
 
 This section introduces the mechanism of frequently used Git commands. 
@@ -177,14 +218,14 @@ The command to clone using the HTTPS URL is as follows:
 
 ### Add new changes to a repository
 
-![A picture illustrating changes to file are moved from the working directory (current project version) to the Staging Area](picture/3SectionsOfGit.png)
-
 Adding new changes to Git does not simply overwrite the new file in the GitHub repository.
 Git contains three main sections: 
 
 1. **Working Directory:** The file structure of a version of the repository
 2. **Staging Area:** The storage of files that will be merged into your project in the next commit
 3. **.git Directory:** The metadata and objects of the repository.
+
+![A picture illustrating changes to file are moved from the working directory (current project version) to the Staging Area](picture/3SectionsOfGit.png)
 
 Any new or modified file must be placed in a Staging Area first.
 Once the user commits the code, 
