@@ -419,7 +419,7 @@ E.g git checkout  updating-feature-branch-process
 
 ![Alt text](image-4.png)
 
-5. Finally, we need to push the new branch to the github, we can run the following command
+5. Finally, we need to push the new branch to the github (remote repo), we can run the following command
 
 git push --set-upstream origin <branch-name>
 
@@ -430,9 +430,21 @@ It may ask your username/password to login into git to perform the push action. 
 
 ![Alt text](image-5.png)
 
-
 ## Merge local code into the remote repository
+To merge a local branch into a remote branch, you can use the following command
+1. git checkout <branch-name> : checkout to the branch that we want to merge in
 
+E.g: git checkout main
 
+2. git pull origin <branch-name>: Get the latest changes from the remote branch into our local branch
 
+E.g: git pull origin main
+
+3. git merge <branch-name> Merge the branch that we want to merge into our current checkout branch
+
+E.g: git merge updating-feature-branch-process
+
+4. git push orign <branch-name> Push all the changes from current checkout branch to the remote branch
+
+E.g : git push origin main
 
