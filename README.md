@@ -382,6 +382,54 @@ Go back to the main repo to see the new branch, you can swith the different bran
 ![Alt text](image-3.png)
 
 ### From command
+1. Select the current branch that you are working on. To see/view the current branch you are currently working on, you need to navigate to the directory (containing .git folder) and run this command
+
+git branch
+
+![Alt text](image-4.png)
+
+![Alt text](image-5.png)
+
+2. As you can see from the attached image, we are on the main branch. In this case, if you want to create a new branch from the main branch you can run the following command
+
+git checkout -b <branch-name> 
+
+E.g git checkout -b updating-feature-branch-process
+
+To verify that you navigate to the new branch, you can type git branch
+
+![Alt text](image-6.png)
+
+3. Remember, when we work in the team, you cannot see other branches (that others created before). You need to run the following command to fetch and navigate to these branches.
+
+For example:
+We don't see the new branch branch-out-example. 
+
+![Alt text](image-7.png)
+
+We need to run git fetch and git checkout branch-out-example to bring that branch into our local device.
+
+![Alt text](image.png)
+
+4. We can switch between different branch by following this command
+
+git checkout <branch-name>
+
+E.g git checkout  updating-feature-branch-process   
+
+![Alt text](image-4.png)
+
+5. Finally, we need to push the new branch to the github, we can run the following command
+
+git push --set-upstream origin <branch-name>
+
+E.g
+git push --set-upstream origin updating-feature-branch-process
+
+It may ask your username/password to login into git to perform the push action. Verify the new branch on the github repo
+
+![Alt text](image-5.png)
+
 
 ## Merge local code into the remote repository
 
