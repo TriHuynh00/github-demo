@@ -392,7 +392,7 @@ git branch
 
 2. As you can see from the attached image, we are on the main branch. In this case, if you want to create a new branch from the main branch you can run the following command
 
-git checkout -b <branch-name> 
+git checkout -b "branch-name" 
 
 E.g git checkout -b updating-feature-branch-process
 
@@ -413,7 +413,7 @@ We need to run git fetch and git checkout branch-out-example to bring that branc
 
 4. We can switch between different branch by following this command
 
-git checkout <branch-name>
+git checkout "branch-name"
 
 E.g git checkout  updating-feature-branch-process   
 
@@ -421,7 +421,7 @@ E.g git checkout  updating-feature-branch-process
 
 5. Finally, we need to push the new branch to the github (remote repo), we can run the following command
 
-git push --set-upstream origin <branch-name>
+git push --set-upstream origin "branch-name"
 
 E.g
 git push --set-upstream origin updating-feature-branch-process
@@ -432,19 +432,19 @@ It may ask your username/password to login into git to perform the push action. 
 
 ## Merge local code into the remote repository
 To merge a local branch into a remote branch, you can use the following command
-1. git checkout <branch-name> : checkout to the branch that we want to merge in
+1. git checkout "branch-name" : checkout to the branch that we want to merge in
 
 E.g: git checkout main
 
-2. git pull origin <branch-name>: Get the latest changes from the remote branch into our local branch
+2. git pull origin "branch-name": Get the latest changes from the remote branch into our local branch
 
 E.g: git pull origin main
 
-3. git merge <branch-name> Merge the branch that we want to merge into our current checkout branch
+3. git merge "branch-name" Merge the branch that we want to merge into our current checkout branch
 
 E.g: git merge updating-feature-branch-process
 
-4. git push orign <branch-name> Push all the changes from current checkout branch to the remote branch
+4. git push orign "branch-name" Push all the changes from current checkout branch to the remote branch
 
 E.g : git push origin main
 
