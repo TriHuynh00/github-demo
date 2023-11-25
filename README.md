@@ -350,7 +350,41 @@ the latest snapshot with the one in our local machine.
  
 > git pull
 
+## Create feature branch in a repository
+Source: https://blog.mergify.com/feature-branch-a-quick-walk-through-git-workflow/
+
+The main idea in a feature branch workflow is that development for each feature happens independently instead of in the main branch. That makes it easier for developers to work on different features without hindering or interfering with the main trunk. It also allows continuous integration since broken code never enters the main branch.
+
+A feature branch Git is usually a branch created off of the main branch. It is for developing a single feature or addressing a single issue
+
+A feature branch is a type of branch in Git typically used to develop new features for the software. When a feature is ready for release, it is merged back into the main branch
+
+In github, to create a new feature branch, we can follow these steps:
+
+### From UI
+1. Select "View All Branches"
+
+![Alt text](image.png)
+
+2. Select "New Branch" option
+
+![Alt text](image-1.png)
+
+3. Create a new branch
+Enter the branch name you want to create. Remember that the branch name needs to relate to the feature purpose or the ticket number you are working on (Jira ticket number). Example: login-function, hot-fix-unable-to-view-car-details, Meta-7763 (Meta is the project on Jira and 7763 is the ticket number).
+
+Source value: the branch that will be created from. For example, we want to create a new feature branch from main branch (branch out), we will select the source value is main. In other cases, if we want to create a new feature branch from dev/develop/development branhc, we will select the source value is dev/develop/development.
+
+![Alt text](image-2.png)
+
+Go back to the main repo to see the new branch, you can swith the different branch to see the updated code/document. This step will be important for the pull request. 
+
+![Alt text](image-3.png)
+
+### From command
+
 ## Merge local code into the remote repository
 
-## Create feature branch in a repository
+
+
 
