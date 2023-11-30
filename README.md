@@ -457,6 +457,6 @@ After merging the changes, we can verify the changes on the github repository
 
 # Note:
 
-In reality, we try to avoid directly the feature branch into main/master branch, we need to create a pull request for code review. This process will allow team members to review the code quality, potential bugs, coding style, code format etc. 
+In reality, we try to avoid merge directly the feature branch into main/master branch, we need to create a pull request for code review. This process will allow team members to review the code quality, potential bugs, coding style, code format etc. 
 
 Read more: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews 
