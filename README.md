@@ -364,95 +364,95 @@ In github, to create a new feature branch, we can follow these steps:
 ### From UI
 1. Select "View All Branches"
 
-![Alt text](image.png)
+![Alt text](picture/image.png)
 
 2. Select "New Branch" option
 
-![Alt text](image-1.png)
+![Alt text](picture/image-1.png)
 
 3. Create a new branch
 Enter the branch name you want to create. Remember that the branch name needs to relate to the feature purpose or the ticket number you are working on (Jira ticket number). Example: login-function, hot-fix-unable-to-view-car-details, Meta-7763 (Meta is the project on Jira and 7763 is the ticket number).
 
 Source value: the branch that will be created from. For example, we want to create a new feature branch from main branch (branch out), we will select the source value is main. In other cases, if we want to create a new feature branch from dev/develop/development branhc, we will select the source value is dev/develop/development.
 
-![Alt text](image-2.png)
+![Alt text](picture/image-2.png)
 
 Go back to the main repo to see the new branch, you can swith the different branch to see the updated code/document. This step will be important for the pull request. 
 
-![Alt text](image-3.png)
+![Alt text](picture/image-3.png)
 
 ### From command
 1. Select the current branch that you are working on. To see/view the current branch you are currently working on, you need to navigate to the directory (containing .git folder) and run this command
 
 git branch
 
-![Alt text](image-4.png)
+![Alt text](picture/image-4.png)
 
-![Alt text](image-5.png)
+![Alt text](picture/image-5.png)
 
 2. As you can see from the attached image, we are on the main branch. In this case, if you want to create a new branch from the main branch you can run the following command
 
-git checkout -b "branch-name" 
+> git checkout -b "branch-name" 
 
 E.g git checkout -b updating-feature-branch-process
 
 To verify that you navigate to the new branch, you can type git branch
 
-![Alt text](image-6.png)
+![Alt text](picture/image-6.png)
 
 3. Remember, when we work in the team, you cannot see other branches (that others created before). You need to run the following command to fetch and navigate to these branches.
 
 For example:
 We don't see the new branch branch-out-example. 
 
-![Alt text](image-7.png)
+![Alt text](picture/image-7.png)
 
 We need to run git fetch and git checkout branch-out-example to bring that branch into our local device.
 
-![Alt text](image.png)
+![Alt text](picture/image.png)
 
 4. We can switch between different branch by following this command
 
-git checkout "branch-name"
+> git checkout "branch-name"
 
 E.g git checkout  updating-feature-branch-process   
 
-![Alt text](image-4.png)
+![Alt text](picture/image-4.png)
 
 5. Finally, we need to push the new branch to the github (remote repo), we can run the following command
 
-git push --set-upstream origin "branch-name"
+> git push --set-upstream origin "branch-name"
 
 E.g
 git push --set-upstream origin updating-feature-branch-process
 
 It may ask your username/password to login into git to perform the push action. Verify the new branch on the github repo
 
-![Alt text](image-5.png)
+![Alt text](picture/image-5.png)
 
 ## Merge local code into the remote repository
 To merge a local branch into a remote branch, you can use the following command
-1. git checkout "branch-name" : checkout to the branch that we want to merge in
+1. **git checkout "branch-name"** : Checkout to the branch that we want to merge in
 
 E.g: git checkout main
 
-2. git pull origin "branch-name": Get the latest changes from the remote branch into our local branch
+2. **git pull origin "branch-name"**: Get the latest changes from the remote branch into our local branch
 
 E.g: git pull origin main
 
-3. git merge "branch-name" Merge the branch that we want to merge into our current checkout branch
+3. **git merge "branch-name"**: Merge the branch that we want to merge into our current checkout branch
 
 E.g: git merge updating-feature-branch-process
 
-4. git push orign "branch-name" Push all the changes from current checkout branch to the remote branch
+4. **git push origin "branch-name"**: Push all the changes from current checkout branch to the remote branch
 
 E.g : git push origin main
 
-![Alt text](image-6.png)
+![Alt text](picture/image-6.png)
 
 After merging the changes, we can verify the changes on the github repository 
 
-![Alt text](image-7.png)
+![Alt text](picture/image-7.png)
 
 
 # Note:
