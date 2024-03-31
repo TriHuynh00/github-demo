@@ -482,7 +482,7 @@ This section summarizes how to use GitHub in VSCode with the following operation
 This 3-minute video describe how to execute the above GitHub operations in VSCode
 
 <video width="480" height="360" controls>
-  <source src="./video/GitHubVsCodeInstruction.mp4" type="video/mp4">
+  <source src="video/GitHubVsCodeInstruction-medium.mp4" type="video/mp4">
 </video>
 
 ## Clone a Repository
