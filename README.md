@@ -480,10 +480,7 @@ This section summarizes how to use GitHub in VSCode with the following operation
 [Pull changes from the repository](#pull-changes-from-the-repository)
 
 This 3-minute video describe how to execute the above GitHub operations in VSCode
-
-<video width="480" height="360" controls>
-  <source src="video/GitHubVsCodeInstruction-medium.mp4" type="video/mp4">
-</video>
+![](video/GitHubVsCodeInstruction-medium.mp4)
 
 ## Clone a Repository
 1/ Start the VSCode IDE. 
