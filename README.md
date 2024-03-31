@@ -19,6 +19,8 @@ in the **Git Guideline** section.
 
 [Git Guideline](#git-guideline)
 
+[Using GitHub in VSCode](#using-github-in-vscode)
+
 ## Creating an Account
 
 ![A image showing the GitHub sign up button on the top right corner of the homepage](picture/signUpBtnLocation.png)
@@ -460,3 +462,80 @@ After merging the changes, we can verify the changes on the github repository
 In reality, we avoid to merge directly the feature branch into main/master branch, we need to create a pull request for code review. This process will allow team members to review the code quality, potential bugs, coding style, code format etc. 
 
 Read more: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews 
+
+# Using GitHub in VSCode
+
+This section summarizes how to use GitHub in VSCode with the following operations:
+
+[Clone a repository](#clone-a-repository)
+
+[Configure your GitHub account in VSCode](#configuring-your-github-account-in-vscode)
+
+[Add files to the Repository](#add-files-to-the-repository)
+
+[Commit the changes](#commit-the-changes-1)
+
+[Push commit(s) to the repository](#push-commits-to-the-repository)
+
+[Pull changes from the repository](#pull-changes-from-the-repository)
+
+## Clone a Repository
+1/ Start the VSCode IDE. 
+
+2/ On the left menu bar, click the Explorer or Source Control tab and choose the "Clone Repository" button.
+
+3/ Copy the Repository URL in GitHub and paste it into the middle top field of VSCode. 
+
+4/ Select the folder on your PC to store the cloned repository. Click on the "Select as Repository Destination".
+
+5/ Choose "Open" to open the repository in VSCode
+
+![A GIF picture of cloning a GitHub repository from VS Code](picture/gif/cloneARepoInVscode.gif)
+
+
+## Configuring your GitHub account in VSCode
+1/ Open the Terminal tab after cloning the repository
+
+2/ Configure your username and email with the following commands:
+<pre>
+git config --global user.name "Your GitHub Username"
+git config --global user.email "Your GitHub Email"
+</pre>
+
+![Configure username and password inside the VSCode Terminal](picture/gif/configureUsernameAndEmail.gif)
+
+
+## Add Files to the Repository
+
+1/ Open VSCode on a git repository folder. On the left menu bar, click on the Source Control tab
+
+2/ The modified files are listed under the Commit button. If the list is empty, create a new file in the repository folder. This new file will appear in the list.
+
+3/ To stage, i.e., to instruct Git to track the changes of a file, click the + button next to the file.
+
+![Track a modified file](picture/gif/addFileToTrack.gif)
+
+## Commit the Changes
+1/ After adding the file(s), type the commit message above the Commit button. Commit messages typically state what and why the current changes are made.
+
+2/ Press the Commit button to finalize the change.
+
+**Note:** If you encounter errors related to authorization/authentication, you should check if your GitHub account is configured correctly in GitHub.
+
+You can directly commit without adding modified files in VSCode, but this operation will add all changed files detected by VSCode. Therefore, if you want to add specific files only, do not commit right after making the changes. Instead, you should add the modified files first, as instructed in the Add Files to the Repository section.
+
+![Commit the changes](picture/gif/commit.gif)
+
+## Push commit(s) to the repository
+1/ After executing all the commits, the Commit button will show the text "Sync Changes". On the right of the text, a number next to an up arrow indicates how many commits can be pushed to the remote repository from your local repository in your VSCode project; a number beside a down arrow indicates how many new changes can be pulled from the remote repository into your local repository.
+
+2/ Click the "Sync Changes" button to push the commits into the remote repository and pull any changes from it.
+
+![Push the commit(s) to remote repository](picture/gif/pushCommits.gif)
+
+## Pull changes from the repository
+1a/ If VSCode detects any changes in the remote repository, the "Sync Changes" button will show the down arrow. Click this button to pull all the changes.
+
+2a/ To manually pull the repository, select the ellipsis icon (...) on the top right of the Source Control Panel. Select the "Pull" option.
+
+![Push the commit(s) to remote repository](picture/gif/pullChanges.gif)
