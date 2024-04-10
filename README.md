@@ -485,21 +485,38 @@ This section summarizes how to use GitHub in VSCode with the following operation
 </video-->
 
 ## Clone a Repository
-1/ Start the VSCode IDE. 
-
-2/ On the left menu bar, click the Explorer or Source Control tab and choose the "Clone Repository" button.
-
-3/ Copy the Repository URL in GitHub and paste it into the middle top field of VSCode. 
-
-4/ Select the folder on your PC to store the cloned repository. Click on the "Select as Repository Destination".
-
-5/ Choose "Open" to open the repository in VSCode
 
 ![A GIF picture of cloning a GitHub repository from VS Code](picture/gif/cloneARepoInVscode.gif)
 
+a/ Copy the Repository URL in GitHub
+
+![alt text](picture/copyRepositoryLink.png)
+
+b/ Start the VSCode IDE. 
+
+c/ On the left menu bar, click the Explorer or Source Control tab and choose the "Clone Repository" button.
+
+![Clone Repository in VS Code](picture/cloneTheRepoInVsCode.png)
+
+d/ Paste the repository URL from step a/ into the middle top field of VSCode. 
+
+![Paste Repo URL into VS Code](picture/pasteRepoUrlInVsCode.png)
+
+e/ Select the folder on your PC to store the cloned repository. Click on the "Select as Repository Destination".
+
+![Select a Folder as the repository Location](picture/selectFolderAsRepoLocation.png)
+
+f/ Choose "Open" to open the repository in VSCode
+
+![Choose "Open" option to open the repo folder](picture/openRepoConfirm.png)
 
 ## Configuring your GitHub account in VSCode
-1/ Open the Terminal tab after cloning the repository
+
+![Configure username and password inside the VSCode Terminal](picture/gif/configureUsernameAndEmail.gif)
+
+1/ Open the Terminal tab after cloning the repository by pressing Ctrl + ` or select **View** -> **Terminal** in the menu
+
+![Open the Terminal in VS Code](picture/openTerminalVsCode.png)
 
 2/ Configure your username and email with the following commands:
 <pre>
@@ -507,8 +524,7 @@ git config --global user.name "Your GitHub Username"
 git config --global user.email "Your GitHub Email"
 </pre>
 
-![Configure username and password inside the VSCode Terminal](picture/gif/configureUsernameAndEmail.gif)
-
+![Configure Username and Email by typing the commands in the Terminal](picture/configUsernameEmailVsCode.png)
 
 ## Add Files to the Repository
 
