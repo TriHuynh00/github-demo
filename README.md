@@ -486,7 +486,7 @@ This section summarizes how to use GitHub in VSCode with the following operation
 
 ## Clone a Repository
 
-![A GIF picture of cloning a GitHub repository from VS Code](picture/gif/cloneARepoInVscode.gif)
+<!-- ![A GIF picture of cloning a GitHub repository from VS Code](picture/gif/cloneARepoInVscode.gif) -->
 
 a/ Copy the Repository URL in GitHub
 
@@ -528,7 +528,7 @@ git config --global user.email "Your GitHub Email"
 
 ## Add Files to the Repository
 
-![Track a modified file](picture/gif/addFileToTrack.gif)
+<!-- ![Track a modified file](picture/gif/addFileToTrack.gif) -->
 
 a/ Open VSCode on a git repository folder. On the left menu bar, click on the **Source Control** tab
 
@@ -542,7 +542,7 @@ c/ To stage, i.e., to instruct Git to track the changes of a file, click the + b
 
 ## Commit the Changes
 
-![Commit the changes](picture/gif/commit.gif)
+<!-- ![Commit the changes](picture/gif/commit.gif) -->
 
 a/ After adding the file(s), type the commit message above the Commit button. Commit messages typically state what and why the current changes are made.
 
@@ -558,7 +558,7 @@ You can directly commit without adding modified files in VSCode, but this operat
 
 ## Push commit(s) to the repository
 
-![Push the commit(s) to remote repository](picture/gif/pushCommits.gif)
+<!-- ![Push the commit(s) to remote repository](picture/gif/pushCommits.gif) -->
 
 a/ After executing all the commits, the Commit button will show the text "Sync Changes". On the right of the text, a number next to an up arrow indicates how many commits can be pushed to the remote repository from your local repository in your VSCode project; a number beside a down arrow indicates how many new changes can be pulled from the remote repository into your local repository.
 
@@ -568,7 +568,7 @@ b/ Click the "Sync Changes" button to push the commits into the remote repositor
 
 ## Pull changes from the repository
 
-![Pull the commit(s) from remote repository](picture/gif/pullChanges.gif)
+<!-- ![Pull the commit(s) from remote repository](picture/gif/pullChanges.gif) -->
 
 I/ If VSCode detects any changes in the remote repository, the "Sync Changes" button will pull commits from the remote repository and then push commits from the local repository in our PC. Click this button to pull all the changes.
 
