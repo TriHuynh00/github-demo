@@ -514,11 +514,11 @@ f/ Choose "Open" to open the repository in VSCode
 
 ![Configure username and password inside the VSCode Terminal](picture/gif/configureUsernameAndEmail.gif)
 
-1/ Open the Terminal tab after cloning the repository by pressing Ctrl + ` or select **View** -> **Terminal** in the menu
+a/ Open the Terminal tab after cloning the repository by pressing Ctrl + ` or select **View** -> **Terminal** in the menu
 
 ![Open the Terminal in VS Code](picture/openTerminalVsCode.png)
 
-2/ Configure your username and email with the following commands:
+b/ Configure your username and email with the following commands:
 <pre>
 git config --global user.name "Your GitHub Username"
 git config --global user.email "Your GitHub Email"
@@ -528,35 +528,54 @@ git config --global user.email "Your GitHub Email"
 
 ## Add Files to the Repository
 
-1/ Open VSCode on a git repository folder. On the left menu bar, click on the Source Control tab
-
-2/ The modified files are listed under the Commit button. If the list is empty, create a new file in the repository folder. This new file will appear in the list.
-
-3/ To stage, i.e., to instruct Git to track the changes of a file, click the + button next to the file.
-
 ![Track a modified file](picture/gif/addFileToTrack.gif)
 
-## Commit the Changes
-1/ After adding the file(s), type the commit message above the Commit button. Commit messages typically state what and why the current changes are made.
+a/ Open VSCode on a git repository folder. On the left menu bar, click on the **Source Control** tab
 
-2/ Press the Commit button to finalize the change.
+![Navigate to the Source Control Tab](picture/VsCodeSourceControlTab.png)
+
+b/ The modified files are listed under the Commit button. If the list is empty, create a new file in the repository folder. This new file will appear in the list.
+
+c/ To stage, i.e., to instruct Git to track the changes of a file, click the + button next to the file.
+
+![Locate the modified files in the Source Control tab](picture/addFileByClickingButtonVsCode.png)
+
+## Commit the Changes
+
+![Commit the changes](picture/gif/commit.gif)
+
+a/ After adding the file(s), type the commit message above the Commit button. Commit messages typically state what and why the current changes are made.
+
+![Add Commit Message](picture/commitFieldVsCode.png)
+
+b/ Press the Commit button to finalize the change.
+
+![Click the Commit Button](picture/commitButtonVsCode.png)
 
 **Note:** If you encounter errors related to authorization/authentication, you should check if your GitHub account is configured correctly in GitHub.
 
 You can directly commit without adding modified files in VSCode, but this operation will add all changed files detected by VSCode. Therefore, if you want to add specific files only, do not commit right after making the changes. Instead, you should add the modified files first, as instructed in the Add Files to the Repository section.
 
-![Commit the changes](picture/gif/commit.gif)
-
 ## Push commit(s) to the repository
-1/ After executing all the commits, the Commit button will show the text "Sync Changes". On the right of the text, a number next to an up arrow indicates how many commits can be pushed to the remote repository from your local repository in your VSCode project; a number beside a down arrow indicates how many new changes can be pulled from the remote repository into your local repository.
-
-2/ Click the "Sync Changes" button to push the commits into the remote repository and pull any changes from it.
 
 ![Push the commit(s) to remote repository](picture/gif/pushCommits.gif)
 
+a/ After executing all the commits, the Commit button will show the text "Sync Changes". On the right of the text, a number next to an up arrow indicates how many commits can be pushed to the remote repository from your local repository in your VSCode project; a number beside a down arrow indicates how many new changes can be pulled from the remote repository into your local repository.
+
+b/ Click the "Sync Changes" button to push the commits into the remote repository and pull any changes from it.
+
+![Click Sync Changes button to push commits](picture/pushButtonVsCode.png)
+
 ## Pull changes from the repository
-1a/ If VSCode detects any changes in the remote repository, the "Sync Changes" button will show the down arrow. Click this button to pull all the changes.
 
-2a/ To manually pull the repository, select the ellipsis icon (...) on the top right of the Source Control Panel. Select the "Pull" option.
+![Pull the commit(s) from remote repository](picture/gif/pullChanges.gif)
 
-![Push the commit(s) to remote repository](picture/gif/pullChanges.gif)
+I/ If VSCode detects any changes in the remote repository, the "Sync Changes" button will pull commits from the remote repository and then push commits from the local repository in our PC. Click this button to pull all the changes.
+
+II/ To manually pull the repository, select the ellipsis icon (...) on the top right of the Source Control Panel. Select the "Pull" option.
+
+![Pull the commit(s) in source control](picture/pullOptionVsCode.png)
+
+
+
+
