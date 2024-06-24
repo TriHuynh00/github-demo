@@ -463,6 +463,8 @@ In reality, we avoid to merge directly the feature branch into main/master branc
 
 Read more: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews 
 
+For more information on integrating Git into IntelliJ IDEA, visit the following link https://www.jetbrains.com/help/idea/using-git-integration.html
+
 # Using GitHub in VSCode
 
 This section summarizes how to use GitHub in VSCode with the following operations:
